@@ -122,9 +122,13 @@ class BlackjackCog(commands.Cog):
         for player in table:
             player_value = player.calculate_hand_value()
             if player.game_state == WINNER:
-                await send_embed_message("Winner!", f"{player.get_name()} wins with a hand of {player_value} against the dealer's hand of {dealers_hand}")
+                embed = discord.Embed(title="Winner!", description=f"{player.get_name()} wins with a hand of {player_value} against the dealer's hand of {dealers_hand}")
+                embed.set_footer(text="Created by Ally Marks")
+                await ctx.send(embed=embed)
             elif not player.is_dealer:
-                await send_embed_message("Loser", f"{player.get_name()} loses with a hand of {player_value} against the dealer's hand of {dealers_hand}")
+                embed = discord.Embed(title="Loser", description=f"{player.get_name()} loses with a hand of {player_value} against the dealer's hand of {dealers_hand}")
+                embed.set_footer(text="Created by Ally Marks")
+                await ctx.send(embed=embed)
 
 async def setup(bot):
     await bot.add_cog(BlackjackCog(bot))

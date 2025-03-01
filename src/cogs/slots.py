@@ -14,6 +14,7 @@ class SlotsCog(commands.Cog):
                 description="Please provide a wager amount. Usage: `!slots <wager> [luck]`",
                 color=discord.Color.red()
             )
+            embed.set_footer(text="Created by Elijah Mckinney")
             await ctx.send(embed=embed)
             return
 
@@ -23,6 +24,7 @@ class SlotsCog(commands.Cog):
                 description="Luck value must be between 0 and 100.",
                 color=discord.Color.red()
             )
+            embed.set_footer(text="Created by Elijah Mckinney")
             await ctx.send(embed=embed)
             return
 
@@ -45,6 +47,7 @@ class SlotsCog(commands.Cog):
             embed.add_field(name="Result", value=' '.join(result), inline=False)
             embed.add_field(name="Loss", value=f"You lost {wager} coins", inline=False)
 
+        embed.set_footer(text="Created by Elijah Mckinney")
         await ctx.send(embed=embed)
 
 async def setup(bot):

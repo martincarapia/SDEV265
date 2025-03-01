@@ -1,6 +1,13 @@
 import discord
 from discord.ext import commands
 import os
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
+
+# Get the token from the .env file
+TOKEN = os.getenv('TOKEN')
 
 class MyClient(commands.Bot):
     def __init__(self):
@@ -18,10 +25,6 @@ class MyClient(commands.Bot):
         print(f"Logged in as {self.user}!")
 
 if __name__ == "__main__":
-    # Read the token from secrets.txt
-    with open('src/secret.txt', 'r') as file:
-        token = file.read().strip()
-
     # Initialize the bot with the necessary intents and run it
     client = MyClient()
-    client.run(token)
+    client.run(TOKEN)
