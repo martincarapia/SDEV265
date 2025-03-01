@@ -8,7 +8,12 @@ class PingCog(commands.Cog):
     @commands.command(name="ping", help="Check the bot's latency")
     async def ping(self, ctx):
         latency_ms = round(self.bot.latency * 1000)  # Convert latency to ms
-        await ctx.send(f"Pong! Latency is {latency_ms}ms.")
+        embed = discord.Embed(
+            title="Pong!",
+            description=f"Latency is {latency_ms}ms.",
+            color=discord.Color.blue()
+        )
+        await ctx.send(embed=embed)
 
 async def setup(bot):
     await bot.add_cog(PingCog(bot))

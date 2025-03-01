@@ -17,6 +17,11 @@ class MyClient(commands.Bot):
     async def on_ready(self):
         print(f"Logged in as {self.user}!")
 
-# Initialize the bot with the necessary intents and run it
-client = MyClient()
-client.run("TOKEN")
+if __name__ == "__main__":
+    # Read the token from secrets.txt
+    with open('src/secret.txt', 'r') as file:
+        token = file.read().strip()
+
+    # Initialize the bot with the necessary intents and run it
+    client = MyClient()
+    client.run(token)
