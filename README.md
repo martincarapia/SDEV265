@@ -2,7 +2,7 @@
 
 Risk-it Ralph is a Discord Bot that aims to bring more fun, excitement, and friendly competition to your Discord server!
 
-Although in the early stages of development and without any code scripted yet, this project will offer a variety of gambling-type and casino-style games. It will allow users to bet, wager, win, and lose virtual currency in a safe, non-harmful, and family-friendly way.
+This project will offer a variety of gambling-type and casino-style games. It will allow users to bet, wager, win, and lose virtual currency in a safe, non-harmful, and family-friendly way.
 
 This project, centered around the Python programming language, will feature the following:
 
@@ -35,11 +35,13 @@ python -m venv venv
 Activate the virtual environment:
 
 On Windows:
+
 ```bash
 .\venv\Scripts\activate
 ```
 
 On macOS and Linux:
+
 ```bash
 source venv/bin/activate
 ```
@@ -72,3 +74,47 @@ Your terminal output should look something like this, and your bot should be onl
 2025-03-03 09:37:16 INFO     discord.gateway Shard ID None has connected to Gateway (Session ID: b530911fd5e359cb584c380276815754).
 Logged in as RiskItRalphDEVSERVE#2356!
 ```
+
+## Usage
+
+Go into Discord and type:
+
+```bash
+!help
+```
+
+You should see an embed there telling you different commands to use!
+
+## Example Usage
+
+Here are a few useful and motivating examples:
+
+```bash
+!blackjack
+```
+
+Starts a game of Blackjack.
+
+```bash
+!roulette
+```
+
+Starts a game of Roulette.
+
+```bash
+!slots
+```
+
+Starts a game of Slots.
+
+## Change Log
+
+### v0.1.0
+
+* Initial release with basic setup and documentation.
+
+## License and Author Info
+
+Risk-it Ralph is available under the MIT license. See [LICENSE](LICENSE) for more information.
+
+For any questions or issues, please contact the author at [mcarapia@ivytech.edu](mailto:mcarapia@ivytech.edu).
